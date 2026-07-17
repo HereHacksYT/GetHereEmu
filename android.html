@@ -3,47 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetHereEmu - Android</title>
+    <title>HereEmu - Android İndir</title>
     <style>
-        body { 
-            background: #0f0f0f; 
-            color: #ffffff; 
-            font-family: sans-serif; 
-            text-align: center; 
-            padding: 40px 20px;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
         }
-        .container { max-width: 400px; margin: 0 auto; }
-        h1 { font-size: 28px; margin-bottom: 10px; font-weight: 700; }
-        p { color: #aaaaaa; font-size: 16px; margin-bottom: 30px; }
-        .btn { 
-            display: block; 
-            padding: 16px; 
-            background: #3ddc84; /* Android Yeşili */
-            color: white; 
-            text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: bold; 
-            font-size: 18px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 12px rgba(61,220,132,0.3);
+        body {
+            background: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 20px;
         }
-        .yt-section { border-top: 1px solid #222; padding-top: 30px; margin-top: 20px; }
-        .yt-link { color: #ff0000; text-decoration: none; font-weight: bold; font-size: 16px; }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            background: #34a853;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3);
+        }
+        .btn:active {
+            transform: scale(0.98);
+            background: #2d9247;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Get HereEmu Here!</h1>
-        <p>Android cihazınız algılandı. APK dosyasını indirmek için aşağıdaki butona basın.</p>
-
-        <a href="app.apk" download="app.apk" class="btn">Android İçin Yükle (APK)</a>
-
-        <div class="yt-section">
-            <a href="https://youtube.com/@osmanburda?si=prVzbNvRY73kPMCU" target="_blank" class="yt-link">
-                YouTube: OsmanBurda
-            </a>
-        </div>
+        <h1>HereEmu Android</h1>
+        <p>Android cihazınız için optimize edilmiş güncel APK sürümünü doğrudan cihazınıza indirin.</p>
+        <a href="hereemu.apk" class="btn">APK Dosyasını İndir</a>
     </div>
 </body>
 </html>
