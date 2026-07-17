@@ -3,45 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetHereEmu - Yönlendiriliyorsunuz</title>
+    <title>HereEmu - İndirme Merkezi</title>
     <style>
-        /* Sayfa yüklenirken kullanıcıya tamamen siyah ve temiz bir ekran göstermek için */
-        body { 
-            background: #0f0f0f; 
-            color: #ffffff; 
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        .loader {
-            font-size: 18px;
-            color: #aaaaaa;
+        body {
+            background: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn-android {
+            background: #a4c639;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(164, 198, 57, 0.2);
+        }
+        .btn-ios {
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .steps {
+            text-align: left;
+            margin-top: 25px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+        }
+        .steps strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        .steps ol {
+            margin-left: 18px;
+        }
+        .steps li {
+            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
-
-    <div class="loader">Cihazınız algılanıyor, lütfen bekleyin...</div>
-
-    <script>
-        // Kullanıcının tarayıcı/cihaz bilgisini alıyoruz
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-        // Eğer cihaz iPhone, iPad veya iPod ise direkt ios.html sayfasına gönder
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location.href = "ios.html";
-        } 
-        // Eğer cihaz Android ise direkt android.html sayfasına gönder
-        else if (/android/i.test(userAgent)) {
-            window.location.href = "android.html";
-        } 
-        // Eğer bilgisayardan (Masaüstü) giriliyorsa varsayılan olarak ios.html sayfasına yönlendir
-        else {
-            window.location.href = "ios.html";
-        }
-    </script>
+    <div class="container">
+        <h1>HereEmu</h1>
+        <p>Cihazınıza uygun olan sürümü seçerek emülatör kurulumunu hemen başlatın.</p>
+        
+        <div class="btn-group">
+            <!-- ANDROID İNDİRME BUTONU -->
+            <!-- Buradaki 'app.apk' kısmını kendi APK dosyanın adı neyse ona göre değiştirebilirsin -->
+            <a href="app.apk" download class="btn btn-android">Android Sürümü (.APK) İndir</a>
+            
+            <!-- IOS İNDİRME BUTONU -->
+            <a href="profil.mobileconfig" download="profil.mobileconfig" class="btn btn-ios">iOS Sürümü (Profil) Yükle</a>
+        </div>
+        
+        <div class="steps">
+            <strong>iOS Kullanıcıları İçin Adımlar:</strong>
+            <ol>
+                <li>Butona basıp profil indirmeye izin verin.</li>
+                <li>Cihazın <b>Ayarlar</b> uygulamasına girin.</li>
+                <li>Üstteki <b>Profil İndirildi</b> uyarısına dokunun.</li>
+                <li>Sağ üstten <b>Yükle</b> diyerek tamamlayın.</li>
+            </ol>
+        </div>
+    </div>
 </body>
 </html>
