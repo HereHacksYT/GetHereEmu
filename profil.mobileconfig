@@ -12,20 +12,17 @@
             <key>Label</key>
             <string>HereEmu</string>
             <key>URL</key>
-            <string>https://gethereemu.onrender.com</string>
-            <key>Icon</key>
-            <data>
-            </data>
+            <string>https://hereemu.onrender.com</string>
             <key>PayloadDescription</key>
             <string>HereEmu Web Clip Uygulamasi</string>
             <key>PayloadDisplayName</key>
             <string>HereEmu</string>
             <key>PayloadIdentifier</key>
-            <string>com.apple.webclip.managed.5A5E7A23-9F1B-4C67-B9B2-C8414F5AA21F</string>
+            <string>com.apple.webclip.managed.7C5E8B23-9F1B-4C67-B9B2-C8414F5AA32F</string>
             <key>PayloadType</key>
             <string>com.apple.webclip.managed</string>
             <key>PayloadUUID</key>
-            <string>5A5E7A23-9F1B-4C67-B9B2-C8414F5AA21F</string>
+            <string>7C5E8B23-9F1B-4C67-B9B2-C8414F5AA32F</string>
             <key>PayloadVersion</key>
             <integer>1</integer>
         </dict>
@@ -43,7 +40,7 @@
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>1C429B4D-7C5F-4E2F-A491-F2E51D041AA2</string>
+    <string>2D530C5D-7C5F-4E2F-A491-F2E51D042BB3</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
 </dict>
