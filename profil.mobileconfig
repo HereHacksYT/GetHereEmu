@@ -11,6 +11,7 @@
             <true/>
             <key>Label</key>
             <string>HereEmu</string>
+            <!-- Bu simgeye tıklandığında açılacak olan ana emülatör linki -->
             <key>URL</key>
             <string>https://hereemu.onrender.com</string>
             <key>PayloadDescription</key>
