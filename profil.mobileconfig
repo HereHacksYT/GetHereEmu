@@ -11,18 +11,19 @@
             <true/>
             <key>Label</key>
             <string>HereEmu</string>
+            <!-- Burası Safari'de açık olan sitenin linkiyle BİREBİR aynı olmalıdır -->
             <key>URL</key>
-            <string>https://hereemu.onrender.com</string>
+            <string>https://gethereemu.onrender.com</string>
             <key>PayloadDescription</key>
             <string>HereEmu Web Clip Uygulamasi</string>
             <key>PayloadDisplayName</key>
             <string>HereEmu</string>
             <key>PayloadIdentifier</key>
-            <string>com.apple.webclip.managed.7C5E8B23-9F1B-4C67-B9B2-C8414F5AA32F</string>
+            <string>com.apple.webclip.managed.9E5B8B23-9F1B-4C67-B9B2-C8414F5AA45F</string>
             <key>PayloadType</key>
             <string>com.apple.webclip.managed</string>
             <key>PayloadUUID</key>
-            <string>7C5E8B23-9F1B-4C67-B9B2-C8414F5AA32F</string>
+            <string>9E5B8B23-9F1B-4C67-B9B2-C8414F5AA45F</string>
             <key>PayloadVersion</key>
             <integer>1</integer>
         </dict>
@@ -40,7 +41,7 @@
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>2D530C5D-7C5F-4E2F-A491-F2E51D042BB3</string>
+    <string>3E640C5D-7C5F-4E2F-A491-F2E51D043CC4</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
 </dict>
