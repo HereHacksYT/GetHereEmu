@@ -3,111 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetHereEmu</title>
+    <title>GetHereEmu - Yönlendiriliyorsunuz</title>
     <style>
+        /* Sayfa yüklenirken kullanıcıya tamamen siyah ve temiz bir ekran göstermek için */
         body { 
             background: #0f0f0f; 
             color: #ffffff; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            text-align: center; 
-            padding: 40px 20px;
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
         }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        h1 { 
-            font-size: 28px; 
-            margin-bottom: 10px; 
-            font-weight: 700;
-        }
-        p { 
-            color: #aaaaaa; 
-            font-size: 16px; 
-            margin-bottom: 30px; 
-        }
-        .btn { 
-            display: block; 
-            padding: 16px; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: bold; 
+        .loader {
             font-size: 18px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
-            transition: transform 0.2s;
-        }
-        .btn:active {
-            transform: scale(0.98);
-        }
-        .yt-section {
-            border-top: 1px solid #222;
-            padding-top: 30px;
-            margin-top: 20px;
-        }
-        .yt-link {
-            display: inline-flex;
-            align-items: center;
-            color: #ff0000;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .yt-link:hover {
-            text-decoration: underline;
+            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- İstediğin Başlık -->
-        <h1>Get HereEmu Here!</h1>
-        <p id="status-text">Cihazınız algılanıyor...</p>
-
-        <!-- Dinamik Yükleme Butonu -->
-        <a id="download-btn" href="#" class="btn" style="display: none;">Yükle</a>
-
-        <!-- İstediğin YouTube Linki -->
-        <div class="yt-section">
-            <a href="https://youtube.com/@osmanburda?si=prVzbNvRY73kPMCU" target="_blank" class="yt-link">
-                YouTube: OsmanBurda
-            </a>
-        </div>
-    </div>
+    <div class="loader">Cihazınız algılanıyor, lütfen bekleyin...</div>
 
     <script>
+        // Kullanıcının tarayıcı/cihaz bilgisini alıyoruz
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        const btn = document.getElementById('download-btn');
-        const statusText = document.getElementById('status-text');
 
-        // iOS Algılama
+        // Eğer cihaz iPhone, iPad veya iPod ise direkt ios.html sayfasına gönder
         if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            statusText.innerText = "iOS cihazınız için hazırdır. Profil yüklemek için aşağıdaki butona basın.";
-            btn.href = "profil.mobileconfig";
-            btn.style.backgroundColor = "#007aff";
-            btn.style.display = "block";
+            window.location.href = "ios.html";
         } 
-        // Android Algılama
+        // Eğer cihaz Android ise direkt android.html sayfasına gönder
         else if (/android/i.test(userAgent)) {
-            statusText.innerText = "Android cihazınız için hazırdır. APK indirmek için aşağıdaki butona basın.";
-            btn.href = "app.apk";
-            btn.style.backgroundColor = "#3ddc84";
-            btn.style.boxShadow = "0 4px 12px rgba(61,220,132,0.3)";
-            btn.style.display = "block";
+            window.location.href = "android.html";
         } 
-        // Masaüstü veya Diğer Cihazlar
+        // Eğer bilgisayardan (Masaüstü) giriliyorsa varsayılan olarak ios.html sayfasına yönlendir
         else {
-            statusText.innerText = "Lütfen cihazınıza uygun olan sürümü seçin:";
-            btn.style.display = "none";
-            
-            // Alternatif butonları ekle
-            statusText.insertAdjacentHTML('afterend', `
-                <a href="profil.mobileconfig" class="btn" style="background:#007aff;">iOS Sürümünü İndir (Profil)</a>
-                <a href="app.apk" class="btn" style="background:#3ddc84; box-shadow: 0 4px 12px rgba(61,220,132,0.3);">Android Sürümünü İndir (APK)</a>
-            `);
+            window.location.href = "ios.html";
         }
     </script>
 </body>
