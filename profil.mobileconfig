@@ -11,24 +11,24 @@
             <true/>
             <key>Label</key>
             <string>HereEmu</string>
+            <key>URL</key>
+            <string>https://gethereemu-site.onrender.com</string>
             <key>PayloadDescription</key>
-            <string>HereEmu Emulator Web Clip</string>
+            <string>HereEmu Web Clip</string>
             <key>PayloadDisplayName</key>
             <string>HereEmu</string>
             <key>PayloadIdentifier</key>
-            <string>com.hereemu.webclip</string>
+            <string>com.apple.webclip.managed.A3606A6F-D8A2-4D30-8041-3F7F5BEAA59B</string>
             <key>PayloadType</key>
             <string>com.apple.webclip.managed</string>
             <key>PayloadUUID</key>
-            <string>9C391163-1250-4B1C-8A1A-A0449D041AA1</string>
+            <string>A3606A6F-D8A2-4D30-8041-3F7F5BEAA59B</string>
             <key>PayloadVersion</key>
             <integer>1</integer>
-            <key>URL</key>
-            <string>https://gethereemu-site.onrender.com</string>
         </dict>
     </array>
     <key>PayloadDescription</key>
-    <string>GetHereEmu yukleme profilidir.</string>
+    <string>HereEmu Yukleme Profili</string>
     <key>PayloadDisplayName</key>
     <string>GetHereEmu Yukleme Profili</string>
     <key>PayloadIdentifier</key>
@@ -40,7 +40,7 @@
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>4A81729F-A7D6-4E8A-B2B2-D4396123DFF2</string>
+    <string>8E84BC6C-0639-4402-95E5-9D275A0E648B</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
 </dict>
