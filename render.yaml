@@ -3,7 +3,7 @@ services:
     name: gethereemu-site
     runtime: static
     buildCommand: ""
-    publishPath: "."
+    publishDir: "."
     headers:
       - path: "/*.mobileconfig"
         name: "Content-Type"
