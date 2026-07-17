@@ -3,46 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetHereEmu - iOS</title>
+    <title>HereEmu - iOS İndir</title>
     <style>
-        body { 
-            background: #0f0f0f; 
-            color: #ffffff; 
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
-            text-align: center; 
-            padding: 40px 20px;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .container { max-width: 400px; margin: 0 auto; }
-        h1 { font-size: 28px; margin-bottom: 10px; font-weight: 700; }
-        p { color: #aaaaaa; font-size: 16px; margin-bottom: 30px; }
-        .btn { 
-            display: block; 
-            padding: 16px; 
-            background: #007aff; /* Apple Mavisi */
-            color: white; 
-            text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: bold; 
-            font-size: 18px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        body {
+            background: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 20px;
         }
-        .yt-section { border-top: 1px solid #222; padding-top: 30px; margin-top: 20px; }
-        .yt-link { color: #ff0000; text-decoration: none; font-weight: bold; font-size: 16px; }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+        .btn:active {
+            transform: scale(0.98);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .steps {
+            text-align: left;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .steps li {
+            margin-left: 20px;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Get HereEmu Here!</h1>
-        <p>iOS cihazınız algılandı. Uygulamayı profil olarak yüklemek için aşağıdaki butona basın.</p>
-
-        <a href="profil.mobileconfig" class="btn">iOS İçin Yükle</a>
-
-        <div class="yt-section">
-            <a href="https://youtube.com/@osmanburda?si=prVzbNvRY73kPMCU" target="_blank" class="yt-link">
-                YouTube: OsmanBurda
-            </a>
+        <h1>HereEmu iOS</h1>
+        <p>iOS cihazınıza web uygulamasını profil olarak yükleyin ve kesintisiz simülasyon deneyimine başlayın.</p>
+        <a href="profil.mobileconfig" class="btn">Profili İndir</a>
+        
+        <div class="steps">
+            <strong>Yükleme Adımları:</strong>
+            <ol style="margin-top: 8px;">
+                <li>Yukarıdaki butona basıp indirmeye izin verin.</li>
+                <li>Cihazınızın <b>Ayarlar</b> uygulamasına girin.</li>
+                <li>En üstte çıkan <b>Profil İndirildi</b> seçeneğine dokunun.</li>
+                <li>Sağ üstten <b>Yükle</b> diyerek işlemi tamamlayın.</li>
+            </ol>
         </div>
     </div>
 </body>
