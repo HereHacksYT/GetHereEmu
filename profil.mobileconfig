@@ -12,7 +12,7 @@
             <key>Label</key>
             <string>HereEmu</string>
             <key>URL</key>
-            <string>https://gethereemu.onrender.com/ios.html</string>
+            <string>https://hereemu.onrender.com</string>
             <key>PayloadDescription</key>
             <string>HereEmu Web Uygulaması</string>
             <key>PayloadDisplayName</key>
