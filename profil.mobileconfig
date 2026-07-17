@@ -12,9 +12,9 @@
             <key>Label</key>
             <string>HereEmu</string>
             <key>URL</key>
-            <string>https://gethereemu-site.onrender.com</string>
+            <string>https://gethereemu.onrender.com</string>
             <key>PayloadDescription</key>
-            <string>HereEmu Web Clip</string>
+            <string>Web Clip</string>
             <key>PayloadDisplayName</key>
             <string>HereEmu</string>
             <key>PayloadIdentifier</key>
