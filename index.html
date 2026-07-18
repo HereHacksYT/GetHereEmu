@@ -2,85 +2,63 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GetHereEmu - Mobile Emulator Distribution</title>
     <style>
-        :root {
-            --card-bg: rgba(16, 20, 30, 0.75);
-            --text-color: #e2e8f0;
-            --accent-color: #00f2fe;
-            --accent-hover: #4facfe;
-            --neon-glow: 0 0 20px rgba(0, 242, 254, 0.6);
-        }
-        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            -webkit-tap-highlight-color: transparent;
         }
-
+        
         body {
-            background: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png') no-repeat center center fixed;
+            background-image: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png');
             background-size: cover;
-            color: var(--text-color);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            color: #ffffff;
             padding: 20px;
         }
 
         .container {
-            background-color: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 40px 30px;
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 1px rgba(255,255,255,0.15) inset;
-            text-align: center;
-            max-width: 400px;
             width: 100%;
-            border: 1px solid rgba(0, 242, 254, 0.25);
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
-            color: #ffffff;
-            font-size: 32px;
-            margin-bottom: 12px;
-            font-weight: 800;
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: 700;
             letter-spacing: -0.5px;
-            background: linear-gradient(to right, #ffffff, #00f2fe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 14px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            color: #94a3b8;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
         }
 
         .btn {
             display: block;
-            padding: 16px 20px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 15px;
             border-radius: 14px;
-            transition: all 0.2s ease;
-            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.1s ease, background-color 0.2s ease;
             border: none;
-            text-align: center;
+            cursor: pointer;
         }
 
         .btn:active {
@@ -88,53 +66,55 @@
         }
 
         .btn-ios {
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
-            color: #050508;
-            box-shadow: var(--neon-glow);
-        }
-
-        .btn-ios:hover {
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.8);
+            background-color: #007aff;
+            color: #ffffff;
         }
 
         .btn-android {
-            background: transparent;
+            background-color: #34a853;
             color: #ffffff;
-            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        .btn-android:hover {
-            border-color: var(--accent-color);
-            background: rgba(0, 242, 254, 0.07);
+        .video-container {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .footer {
-            margin-top: 30px;
-            font-size: 11px;
-            color: #64748b;
-            letter-spacing: 0.5px;
+        .video-title {
+            font-size: 14px;
+            color: #dddddd;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 14px;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            background-color: #000000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>HereEmu</h1>
-        <p>Mobil emülatör kurulum merkezine hoş geldiniz. Cihazınıza uygun olan yükleme seçeneğini seçin.</p>
+        <h1>GetHereEmu</h1>
         
-        <div class="btn-group">
-            <!-- Netlify headers kuralları ile beslenen doğrudan link -->
-            <a href="/profil.mobileconfig" class="btn btn-ios">
-                iOS Profil Yükle
-            </a>
-            
-            <a href="app.apk" class="btn btn-android" download>
-                Android APK İndir
-            </a>
-        </div>
+        <!-- iOS Butonu: Doğrudan siteyi açar, profil hatası vermez -->
+        <a href="https://gethereemu.netlify.app" class="btn btn-ios">iOS Uygulaması Olarak Ekle</a>
         
-        <div class="footer">
-            &copy; 2026 HereEmu. Tüm hakları saklıdır.
+        <!-- Android Paketi Linki -->
+        <a href="#" class="btn btn-android">Android (.APK) İndir</a>
+
+        <!-- Nasıl Yapılır Video Alanı -->
+        <div class="video-container">
+            <div class="video-title">👇 Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
+            <video controls playsinline>
+                <source src="how.mp4" type="video/mp4">
+                Tarayıcınız video oynatmayı desteklemiyor.
+            </video>
         </div>
     </div>
 
