@@ -2,124 +2,126 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HereEmu - İndirme Merkezi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GetHereEmu - Mobile Emulator Distribution</title>
     <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --text-color: #c5c6c7;
+            --accent-color: #66fcf1;
+            --accent-hover: #45a29e;
+        }
+        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
+
         body {
-            background: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            color: #ffffff;
+            justify-content: center;
+            min-height: 100vh;
             padding: 20px;
         }
+
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 24px;
-            padding: 40px 30px;
-            width: 100%;
-            max-width: 420px;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid rgba(102, 252, 241, 0.1);
         }
+
         h1 {
+            color: #ffffff;
             font-size: 28px;
-            font-weight: 700;
             margin-bottom: 10px;
-            letter-spacing: -0.5px;
+            font-weight: 700;
         }
+
         p {
             font-size: 15px;
-            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
             line-height: 1.5;
-            margin-bottom: 30px;
         }
+
         .btn-group {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
+
         .btn {
             display: block;
-            width: 100%;
-            padding: 16px;
-            border-radius: 14px;
-            font-weight: 600;
+            padding: 15px 20px;
             font-size: 16px;
+            font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        .btn-android {
-            background: #a4c639;
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(164, 198, 57, 0.2);
-        }
-        .btn-ios {
-            background: #ffffff;
-            color: #000000;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-        }
-        .btn:active {
-            transform: scale(0.98);
-        }
-        .steps {
-            text-align: left;
-            margin-top: 25px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
             border-radius: 12px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.4;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
         }
-        .steps strong {
-            display: block;
-            margin-bottom: 5px;
-            color: #ffffff;
+
+        .btn-ios {
+            background-color: var(--accent-color);
+            color: #0b0c10;
         }
-        .steps ol {
-            margin-left: 18px;
+
+        .btn-ios:hover {
+            background-color: var(--accent-hover);
         }
-        .steps li {
-            margin-bottom: 5px;
+
+        .btn-android {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-android:hover {
+            background-color: rgba(102, 252, 241, 0.1);
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>HereEmu</h1>
-        <p>Cihazınıza uygun olan sürümü seçerek emülatör kurulumunu hemen başlatın.</p>
+        <p>Mobil emülatör kurulum merkezine hoş geldiniz. Cihazınıza uygun olan yükleme seçeneğini seçin.</p>
         
         <div class="btn-group">
-            <!-- ANDROID İNDİRME BUTONU -->
-            <!-- Buradaki 'app.apk' kısmını kendi APK dosyanın adı neyse ona göre değiştirebilirsin -->
-            <a href="app.apk" download class="btn btn-android">Android Sürümü (.APK) İndir</a>
+            <!-- iOS için doğrudan Apple Protokolü tetikleyen buton -->
+            <a href="apple-wm-service://poetic-rolypoly-99e313.netlify.app/profil.mobileconfig" class="btn btn-ios">
+                iOS Profil Yükle
+            </a>
             
-            <!-- IOS İNDİRME BUTONU -->
-            <a href="profil.mobileconfig" download="profil.mobileconfig" class="btn btn-ios">iOS Sürümü (Profil) Yükle</a>
+            <!-- Android indirme butonu -->
+            <a href="app.apk" class="btn btn-android" download>
+                Android APK İndir
+            </a>
         </div>
         
-        <div class="steps">
-            <strong>iOS Kullanıcıları İçin Adımlar:</strong>
-            <ol>
-                <li>Butona basıp profil indirmeye izin verin.</li>
-                <li>Cihazın <b>Ayarlar</b> uygulamasına girin.</li>
-                <li>Üstteki <b>Profil İndirildi</b> uyarısına dokunun.</li>
-                <li>Sağ üstten <b>Yükle</b> diyerek tamamlayın.</li>
-            </ol>
+        <div class="footer">
+            &copy; 2026 HereEmu. Tüm hakları saklıdır.
         </div>
     </div>
+
 </body>
 </html>
