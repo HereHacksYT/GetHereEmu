@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetHereEmu - Mobile Emulator Distribution</title>
+    <title>GetHereEmu - Mobile & PC Emulator Distribution</title>
     <style>
         * {
             box-sizing: border-box;
@@ -76,6 +76,11 @@
             color: #ffffff;
         }
 
+        .btn-pc {
+            background-color: #5865F2; /* Şık bir mavi/mor tonu */
+            color: #ffffff;
+        }
+
         .video-container {
             margin-top: 25px;
             padding-top: 20px;
@@ -103,10 +108,16 @@
     <div class="container">
         <h1>GetHereEmu</h1>
         
+        <!-- iOS Butonu: Paylaş menüsü rehberiyle eklemek isteyen mobil kullanıcılar için -->
         <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-ios">iOS Uygulaması Olarak Ekle</a>
         
+        <!-- Android Paketi Butonu: Repodaki app.apk dosyasını indirir -->
         <a href="app.apk" class="btn btn-android" download="app.apk">Android (.APK) İndir</a>
 
+        <!-- Bilgisayar Butonu: Sadece ismi yazar ve doğrudan yeni sekmede siteyi açar -->
+        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc">Bilgisayar</a>
+
+        <!-- Nasıl Yapılır Video Alanı (iOS için rehber) -->
         <div class="video-container">
             <div class="video-title">👇 Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
             <video controls playsinline>
