@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GetHereEmu</title>
+    <!-- Font Awesome (ücretsiz ikon kütüphanesi) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
+
         body {
             background-image: url('https://i.ibb.co/Zpq9RmdH/Here-Emu.png');
             background-size: cover;
@@ -47,6 +49,7 @@
             letter-spacing: -0.5px;
         }
 
+        /* Ortak buton stili */
         .btn {
             display: block;
             width: 100%;
@@ -60,6 +63,7 @@
             border: none;
             cursor: pointer;
             text-align: center;
+            color: #ffffff;
         }
 
         .btn:active {
@@ -68,17 +72,50 @@
 
         .btn-ios {
             background-color: #007aff;
-            color: #ffffff;
         }
 
         .btn-android {
             background-color: #34a853;
-            color: #ffffff;
         }
 
         .btn-pc {
-            background-color: #5865F2; /* Şık bir mavi/mor tonu */
+            background-color: #5865F2;
+        }
+
+        /* Sosyal medya butonları */
+        .social-row {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0 10px;
+        }
+
+        .social-row .btn-social {
+            flex: 1;
+            padding: 14px 0;
+            border-radius: 14px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
             color: #ffffff;
+            font-weight: 600;
+            transition: transform 0.1s ease, opacity 0.2s ease;
+        }
+
+        .social-row .btn-social:active {
+            transform: scale(0.96);
+        }
+
+        .btn-instagram {
+            background: #d62976;
+            /* Instagram rengi */
+        }
+
+        .btn-youtube {
+            background: #ff0000;
+            /* YouTube kırmızısı */
         }
 
         .video-container {
@@ -99,7 +136,7 @@
             border-radius: 14px;
             border: 1.5px solid rgba(255, 255, 255, 0.2);
             background-color: #000000;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -107,21 +144,33 @@
 
     <div class="container">
         <h1>GetHereEmu</h1>
-        
-        <!-- iOS Butonu: Paylaş menüsü rehberiyle eklemek isteyen mobil kullanıcılar için -->
-        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-ios">iOS Uygulaması Olarak Ekle</a>
-        
-        <!-- Android Paketi Butonu: Repodaki app.apk dosyasını indirir -->
-        <a href="app.apk" class="btn btn-android" download="app.apk">Android (.APK) İndir</a>
 
-        <!-- Bilgisayar Butonu: Sadece ismi yazar ve doğrudan yeni sekmede siteyi açar -->
-        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc">Bilgisayar</a>
+        <!-- Mevcut butonlar -->
+        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-ios">
+            iOS Uygulaması Olarak Ekle
+        </a>
+        <a href="app.apk" class="btn btn-android" download="app.apk">
+            Android (.APK) İndir
+        </a>
+        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc">
+            Bilgisayar
+        </a>
 
-        <!-- Nasıl Yapılır Video Alanı (iOS için rehber) -->
+        <!-- ⭐ YENİ: Sosyal medya butonları -->
+        <div class="social-row">
+            <a href="https://www.instagram.com/hereemu.offical/" target="_blank" class="btn-social btn-instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.youtube.com/@hereemu.offical/" target="_blank" class="btn-social btn-youtube">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+        </div>
+
+        <!-- Video alanı (değişmedi) -->
         <div class="video-container">
             <div class="video-title">👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
             <video controls playsinline>
-                <source src="how.mp4" type="video/mp4">
+                <source src="how.mp4" type="video/mp4" />
                 Tarayıcınız video oynatmayı desteklemiyor.
             </video>
         </div>
