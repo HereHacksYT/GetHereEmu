@@ -82,9 +82,23 @@
             background-color: #5865F2;
         }
 
-        /* ⭐ YENİ: Web Siteyi Aç butonu (mavi ton) */
         .btn-web {
             background-color: #3b82f6;
+        }
+
+        /* ⭐ YENİ: GitHub butonu stili */
+        .btn-github {
+            background-color: #24292e; /* GitHub koyu rengi */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-github img {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
         }
 
         /* Sosyal medya butonları */
@@ -158,10 +172,14 @@
         <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc">
             Bilgisayar (Sadece Web Siteyi Açar)
         </a>
-
-        <!-- ⭐ YENİ: Web Siteyi Aç butonu (Bilgisayar'ın altında, sosyal medyanın üstünde) -->
         <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-web">
             Web Siteyi Aç
+        </a>
+
+        <!-- ⭐ YENİ: GitHub Açık Kaynak butonu -->
+        <a href="https://github.com/HereHacksYT/GetHereEmu/tree/main#enjoy" target="_blank" class="btn btn-github">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvBUdhecnaB8gqxvYqSkz-q9uHXICrn8CG-o7_WlJbQ&s" alt="GitHub Logo" />
+            GitHub Açık Kaynak
         </a>
 
         <!-- Sosyal medya butonları -->
@@ -174,7 +192,7 @@
             </a>
         </div>
 
-        <!-- Video alanı (değişmedi) -->
+        <!-- Video alanı -->
         <div class="video-container">
             <div class="video-title">👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
             <video controls playsinline>
