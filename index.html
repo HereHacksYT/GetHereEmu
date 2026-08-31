@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GetHereEmu</title>
-    <!-- Font Awesome (ücretsiz ikon kütüphanesi) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         * {
@@ -44,9 +44,40 @@
 
         h1 {
             font-size: 24px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             font-weight: 700;
             letter-spacing: -0.5px;
+        }
+
+        /* Dil seçici butonları */
+        .lang-selector {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            backdrop-filter: blur(4px);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
         }
 
         /* Ortak buton stili */
@@ -100,14 +131,13 @@
             border-radius: 4px;
         }
 
-        /* ⭐ YENİ: Gmail butonu stili */
         .btn-gmail {
-            background-color: #ea4335; /* Gmail kırmızısı */
+            background-color: #ea4335;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            margin-top: 5px; /* sosyal medya ile arasına az boşluk */
+            margin-top: 5px;
         }
 
         .btn-gmail img {
@@ -170,69 +200,163 @@
             background-color: #000000;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
+
+        /* SEO metni için */
+        .seo-box {
+            margin-bottom: 25px;
+            text-align: left;
+            background: rgba(0,0,0,0.4);
+            padding: 15px;
+            border-radius: 14px;
+            border-left: 3px solid #34a853;
+        }
+
+        .seo-box p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #f0f0f0;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>GetHereEmu</h1>
+        <h1 id="siteTitle">GetHereEmu</h1>
 
-        <!-- ⭐ EKLENEN SEO METNİ (Google Botu İçin Açıklama) ⭐ -->
-        <div style="margin-bottom: 25px; text-align: left; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 14px; border-left: 3px solid #34a853;">
-            <p style="font-size: 14px; line-height: 1.7; color: #f0f0f0; margin: 0;">
+        <!-- Dil seçici -->
+        <div class="lang-selector">
+            <button class="lang-btn active" data-lang="tr">🇹🇷 Türkçe</button>
+            <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+        </div>
+
+        <!-- SEO metni -->
+        <div class="seo-box">
+            <p id="seoText">
                 <strong>GetHereEmu</strong>, <strong>OsmanBurda</strong> tarafından geliştirilen ücretsiz bir emülatör ve uygulama platformudur. 
                 Bu sitede Android cihazlar için <strong>.APK</strong> uzantılı uygulama ve oyun dosyalarını güvenle indirebilirsiniz. 
                 İster doğrudan Android telefonunuza kurun, ister <strong>iOS (iPhone)</strong> veya <strong>Bilgisayar (PC)</strong> üzerinden web arayüzüyle erişim sağlayın. 
                 Tamamen açık kaynak kodlu olan bu proje, ücretsiz oyun ve uygulama arşivi sunmaktadır. 
-                Aşağıdaki videoyu izleyerek iOS cihazınıza nasıl ana ekrana ekleyeceğinizi öğrenebilirsiniz!
+ı                Aşağıdaki videoyu izleyerek iOS cihazınıza nasıl ana ekrana ekleyeceğ Olinizi öğrenebilirsiniz!
             </p>
         </div>
 
-        <!-- Mevcut butonlar -->
-        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-ios">
-            iOS Ana Ekran Uygulaması Olarak Ekle (Aşağıdaki videoyu izleyin)
-        </a>
-        <a href="app.apk" class="btn btn-android" download="app.apk">
-            Android (.APK) İndir
-        </a>
-        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc">
-            Bilgisayar (Sadece Web Siteyi Açar)
-        </a>
-        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-web">
-            Web Siteyi Aç
-        </a>
+        <!-- Butarakonlar (id'ler ile işaretlendi) -->
+        <a href="https://hereemu.onrender.com E" target="_blank" class="btn btn-ios" id="btnIos">iOS Ana Ekran Uygulamaskle (Aşağıdaki videoyu izleyin)</a>
+        <a href="app.apk" class="btn btn-android" download="app.apk" id="btnAndroid">Android (.APK) İndir</a>
+        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc" id="btnPc">Bilgisayar (Sadece Web Siteyi Açar)</a>
+        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-web" id="btnWeb">Web Siteyi Aç</a>
 
-        <!-- GitHub Açık Kaynak butonu -->
-        <a href="https://github.com/HereHacksYT/GetHereEmu/tree/main#enjoy" target="_blank" class="btn btn-github">
+        <!-- GitHub -->
+        <a href="https://github.com/HereHacksYT/GetHereEmu/tree/main#enjoy" target="_blank" class="btn btn-github" id="btnGithub">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvBUdhecnaB8gqxvYqSkz-q9uHXICrn8CG-o7_WlJbQ&s" alt="GitHub Logo" />
-            GitHub Açık Kaynak
+            <span id="githubText">GitHub Açık Kaynak</span>
         </a>
 
-        <!-- Sosyal medya butonları -->
+        <!-- Sosyal medya -->
         <div class="social-row">
             <a href="https://www.instagram.com/hereemu.offical/" target="_blank" class="btn-social btn-instagram">
-                <i class="fab fa-instagram"></i> Instagram
+                <i class="fab fa-instagram"></i> <span id="instaText">Instagram</span>
             </a>
             <a href="https://www.youtube.com/@hereemu.offical/" target="_blank" class="btn-social btn-youtube">
-                <i class="fab fa-youtube"></i> YouTube
+                <i class="fab fa-youtube"></i> <span id="youtubeText">YouTube</span>
             </a>
         </div>
 
-        <!-- ⭐ YENİ: Gmail İletişim Butonu -->
-        <a href="mailto:osmanburdacomeback@gmail.com" class="btn btn-gmail">
+        <!-- Gmail -->
+        <a href="mailto:osmanburdacomeback@gmail.com" class="btn btn-gmail" id="btnGmail">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-UpsGF25ae1gwhwoTGLavoHFld8MpH3HYrWiNf41geQ&s=10" alt="Gmail Logo" />
-            İletişim (Gmail)
+            <span id="gmailText">İletişim (Gmail)</span>
         </a>
 
-        <!-- Video alanı -->
+        <!-- Video -->
         <div class="video-container">
-            <div class="video-title">👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
+            <div class="video-title" id="videoTitle">👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
             <video controls playsinline>
                 <source src="how.mp4" type="video/mp4" />
-                Tarayıcınız video oynatmayı desteklemiyor.
+                <span id="videoFallback">Tarayıcınız video oynatmayı desteklemiyor.</span>
             </video>
         </div>
     </div>
+
+    <script>
+        // Dil verileri
+        const translations = {
+            tr: {
+                siteTitle: "GetHereEmu",
+                seoText: `<strong>GetHereEmu</strong>, <strong>OsmanBurda</strong> tarafından geliştirilen ücretsiz bir emülatör ve uygulama platformudur. Bu sitede Android cihazlar için <strong>.APK</strong> uzantılı uygulama ve oyun dosyalarını güvenle indirebilirsiniz. İster doğrudan Android telefonunuza kurun, ister <strong>iOS (iPhone)</strong> veya <strong>Bilgisayar (PC)</strong> üzerinden web arayüzüyle erişim sağlayın. Tamamen açık kaynak kodlu olan bu proje, ücretsiz oyun ve uygulama arşivi sunmaktadır. Aşağıdaki videoyu izleyerek iOS cihazınıza nasıl ana ekrana ekleyeceğinizi öğrenebilirsiniz!`,
+                btnIos: "iOS Ana Ekran Uygulaması Olarak Ekle (Aşağıdaki videoyu izleyin)",
+                btnAndroid: "Android (.APK) İndir",
+                btnPc: "Bilgisayar (Sadece Web Siteyi Açar)",
+                btnWeb: "Web Siteyi Aç",
+                githubText: "GitHub Açık Kaynak",
+                instaText: "Instagram",
+                youtubeText: "YouTube",
+                gmailText: "İletişim (Gmail)",
+                videoTitle: "👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇",
+                videoFallback: "Tarayıcınız video oynatmayı desteklemiyor."
+            },
+            en: {
+                siteTitle: "GetHereEmu",
+                seoText: `<strong>GetHereEmu</strong> is a free emulator and application platform developed by <strong>OsmanBurda</strong>. On this site, you can safely download <strong>.APK</strong> applications and game files for Android devices. You can either install them directly on your Android phone, or access them via the web interface on <strong>iOS (iPhone)</strong> or <strong>Computer (PC)</strong>. This fully open-source project offers a free archive of games and applications. Watch the video below to learn how to add it to your iOS home screen!`,
+                btnIos: "Add as iOS Home Screen App (Watch the video below)",
+                btnAndroid: "Download Android (.APK)",
+                btnPc: "Computer (Just Opens the Website)",
+                btnWeb: "Open Website",
+                githubText: "GitHub Open Source",
+                instaText: "Instagram",
+                youtubeText: "YouTube",
+                gmailText: "Contact (Gmail)",
+                videoTitle: "👇 How to Add to iOS Home Screen? Watch 👇",
+                videoFallback: "Your browser does not support video playback."
+            }
+        };
+
+        // Mevcut dil
+        let currentLang = localStorage.getItem('lang') || 'tr';
+
+        // Dil değiştirme fonksiyonu
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+
+            // Tüm metinleri güncelle
+            document.getElementById('siteTitle').textContent = translations[lang].siteTitle;
+            document.getElementById('seoText').innerHTML = translations[lang].seoText;
+            document.getElementById('btnIos').textContent = translations[lang].btnIos;
+            document.getElementById('btnAndroid').textContent = translations[lang].btnAndroid;
+            document.getElementById('btnPc').textContent = translations[lang].btnPc;
+            document.getElementById('btnWeb').textContent = translations[lang].btnWeb;
+            document.getElementById('githubText').textContent = translations[lang].githubText;
+            document.getElementById('instaText').textContent = translations[lang].instaText;
+            document.getElementById('youtubeText').textContent = translations[lang].youtubeText;
+            document.getElementById('gmailText').textContent = translations[lang].gmailText;
+            document.getElementById('videoTitle').textContent = translations[lang].videoTitle;
+            document.getElementById('videoFallback').textContent = translations[lang].videoFallback;
+
+            // Dil butonlarının aktif durumunu güncelle
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // HTML lang attribute güncelle
+            document.documentElement.lang = lang;
+        }
+
+        // Dil butonlarına tıklama olayı ekle
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const lang = this.dataset.lang;
+                setLanguage(lang);
+            });
+        });
+
+        // Sayfa yüklendiğinde kayıtlı dili uygula
+        document.addEventListener('DOMContentLoaded', function() {
+            setLanguage(currentLang);
+        });
+    </script>
 
 </body>
 </html>
