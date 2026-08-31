@@ -86,9 +86,8 @@
             background-color: #3b82f6;
         }
 
-        /* ⭐ YENİ: GitHub butonu stili */
         .btn-github {
-            background-color: #24292e; /* GitHub koyu rengi */
+            background-color: #24292e;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -96,6 +95,22 @@
         }
 
         .btn-github img {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
+        /* ⭐ YENİ: Gmail butonu stili */
+        .btn-gmail {
+            background-color: #ea4335; /* Gmail kırmızısı */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px; /* sosyal medya ile arasına az boşluk */
+        }
+
+        .btn-gmail img {
             width: 24px;
             height: 24px;
             border-radius: 4px;
@@ -187,7 +202,7 @@
             Web Siteyi Aç
         </a>
 
-        <!-- ⭐ YENİ: GitHub Açık Kaynak butonu -->
+        <!-- GitHub Açık Kaynak butonu -->
         <a href="https://github.com/HereHacksYT/GetHereEmu/tree/main#enjoy" target="_blank" class="btn btn-github">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvBUdhecnaB8gqxvYqSkz-q9uHXICrn8CG-o7_WlJbQ&s" alt="GitHub Logo" />
             GitHub Açık Kaynak
@@ -202,6 +217,12 @@
                 <i class="fab fa-youtube"></i> YouTube
             </a>
         </div>
+
+        <!-- ⭐ YENİ: Gmail İletişim Butonu -->
+        <a href="mailto:osmanburdacomeback@gmail.com" class="btn btn-gmail">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-UpsGF25ae1gwhwoTGLavoHFld8MpH3HYrWiNf41geQ&s=10" alt="Gmail Logo" />
+            İletişim (Gmail)
+        </a>
 
         <!-- Video alanı -->
         <div class="video-container">
