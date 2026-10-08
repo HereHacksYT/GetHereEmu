@@ -49,6 +49,21 @@
             letter-spacing: -0.5px;
         }
 
+        /* Bölüm başlıkları */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: left;
+            color: #ffffff;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
         /* Dil seçici butonları */
         .lang-selector {
             display: flex;
@@ -109,6 +124,20 @@
             background-color: #34a853;
         }
 
+        .btn-android-gdrive {
+            background-color: #1a73e8; /* Google Drive mavisi */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-android-gdrive img {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
         .btn-pc {
             background-color: #5865F2;
         }
@@ -131,9 +160,9 @@
             border-radius: 4px;
         }
 
-        /* ⭐ YENİ: Telegram butonu stili */
+        /* Telegram butonu stili */
         .btn-telegram {
-            background-color: #0088cc; /* Telegram mavisi */
+            background-color: #0088cc;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -197,8 +226,8 @@
         }
 
         .video-container {
-            margin-top: 25px;
-            padding-top: 20px;
+            margin-top: 15px;
+            padding-top: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -219,7 +248,7 @@
 
         /* SEO metni için */
         .seo-box {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-align: left;
             background: rgba(0,0,0,0.4);
             padding: 15px;
@@ -246,7 +275,8 @@
             <button class="lang-btn" data-lang="en">🇬🇧 English</button>
         </div>
 
-        <!-- SEO metni -->
+        <!-- === TANITIM BÖLÜMÜ === -->
+        <h2 class="section-title" id="sectionIntro">Tanıtım</h2>
         <div class="seo-box">
             <p id="seoText">
                 <strong>GetHereEmu</strong>, <strong>OsmanBurda</strong> tarafından geliştirilen ücretsiz bir emülatör ve uygulama platformudur. 
@@ -257,18 +287,44 @@
             </p>
         </div>
 
-        <!-- Butonlar -->
-        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-ios" id="btnIos">iOS Ana Ekran Uygulaması Olarak Ekle (Aşağıdaki videoyu izleyin)</a>
-        <a href="app.apk" class="btn btn-android" download="app.apk" id="btnAndroid">Android (.APK) İndir (Otomatik Güncelleme alır)</a>
+        <!-- === iOS BÖLÜMÜ === -->
+        <h2 class="section-title" id="sectionIos">iOS</h2>
+        <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-ios" id="btnIosÜ">iOS Ana Ekran Uygulaması Olarak Ekle (A ===şağıdaki videoyu izleyin)</a>
+        <div class="video-container">
+            <div class="video-title" id="videoTitle">👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
+            <video controls playsinline>
+                <source src="how.mp4" type="video/mp4" />
+                <span id="videoFallback">Tarayıcınız video oynatmayı desteklemiyor.</span>
+            </video>
+        </div>
+
+        <!-- === ANDROID BÖLÜMÜ === -->
+        <h2 class="section-title" id="sectionAndroid">Android</h2>
+        <!-- GitHub'dan APK indirme -->
+        <a href="HereEmu_v10.0.0_sing.apk" class="btn btn-android" download="HereEmu_v10.0.0_sing.apk" id="btnAndroid">Android (.APK) İndir (GitHub – Otomatik Güncelleme Alır)</a>
+        <!-- Google Drive'dan APK indirme (bağlantıyı kendiniz ekleyin) -->
+        <a href="#" class="btn btn-android-gdrive" id="btnAndroidGdrive">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-UpsGF25ae1gwhwoTGLavoHFld8MpH3HYrWiNf41geQ&s=10" alt="Google Drive Logo" />
+            <span id="btnAndroidGdriveText">Google Drive'dan APK İndir</span>
+        </a>
+
+        <!-- === BİLGİSAYAR BÖLÜM -->
+        <h2 class="section-title" id="sectionPc">Bilgisayar</h2>
         <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-pc" id="btnPc">Bilgisayar (Sadece Web Siteyi Açar)</a>
+
+        <!-- === WEB BÖLÜMÜ === -->
+        <h2 class="section-title" id="sectionWeb">Web</h2>
         <a href="https://hereemu.onrender.com" target="_blank" class="btn btn-web" id="btnWeb">Web Siteyi Aç</a>
 
-        <!-- GitHub -->
+        <!-- === GITHUB BÖLÜMÜ === -->
+        <h2 class="section-title" id="sectionGithub">GitHub</h2>
         <a href="https://github.com/HereHacksYT/GetHereEmu/tree/main#enjoy" target="_blank" class="btn btn-github" id="btnGithub">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvBUdhecnaB8gqxvYqSkz-q9uHXICrn8CG-o7_WlJbQ&s" alt="GitHub Logo" />
             <span id="githubText">GitHub Açık Kaynak</span>
         </a>
 
+        <!-- === İLETİŞİM BÖLÜMÜ === -->
+        <h2 class="section-title" id="sectionContact">İletişim</h2>
         <!-- Sosyal medya butonları (Instagram & YouTube) -->
         <div class="social-row">
             <a href="https://www.instagram.com/hereemu.offical/" target="_blank" class="btn-social btn-instagram">
@@ -279,7 +335,7 @@
             </a>
         </div>
 
-        <!-- ⭐ YENİ: Telegram butonu (Instagram & YouTube altında, Gmail üstünde) -->
+        <!-- Telegram butonu -->
         <a href="https://t.me/+iyZ7BAVaM1VjY2I8" target="_blank" class="btn btn-telegram" id="btnTelegram">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPOUf7LgaD4aoxl8tr2yFMBGrydnnaeoNB2QyVYbVxg&s=10" alt="Telegram Logo" />
             <span id="telegramText">Telegram</span>
@@ -290,15 +346,6 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-UpsGF25ae1gwhwoTGLavoHFld8MpH3HYrWiNf41geQ&s=10" alt="Gmail Logo" />
             <span id="gmailText">İletişim (Gmail)</span>
         </a>
-
-        <!-- Video -->
-        <div class="video-container">
-            <div class="video-title" id="videoTitle">👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇</div>
-            <video controls playsinline>
-                <source src="how.mp4" type="video/mp4" />
-                <span id="videoFallback">Tarayıcınız video oynatmayı desteklemiyor.</span>
-            </video>
-        </div>
     </div>
 
     <script>
@@ -306,9 +353,17 @@
         const translations = {
             tr: {
                 siteTitle: "GetHereEmu",
+                sectionIntro: "Tanıtım",
+                sectionIos: "iOS",
+                sectionAndroid: "Android",
+                sectionPc: "Bilgisayar",
+                sectionWeb: "Web",
+                sectionGithub: "GitHub",
+                sectionContact: "İletişim",
                 seoText: `<strong>GetHereEmu</strong>, <strong>OsmanBurda</strong> tarafından geliştirilen ücretsiz bir emülatör ve uygulama platformudur. Bu sitede Android cihazlar için <strong>.APK</strong> uzantılı uygulama ve oyun dosyalarını güvenle indirebilirsiniz. İster doğrudan Android telefonunuza kurun, ister <strong>iOS (iPhone)</strong> veya <strong>Bilgisayar (PC)</strong> üzerinden web arayüzüyle erişim sağlayın. Tamamen açık kaynak kodlu olan bu proje, ücretsiz oyun ve uygulama arşivi sunmaktadır. Aşağıdaki videoyu izleyerek iOS cihazınıza nasıl ana ekrana ekleyeceğinizi öğrenebilirsiniz!`,
                 btnIos: "iOS Ana Ekran Uygulaması Olarak Ekle (Aşağıdaki videoyu izleyin)",
-                btnAndroid: "Android (.APK) İndir (Otomatik Güncelleme Alır)",
+                btnAndroid: "Android (.APK) İndir (GitHub – Otomatik Güncelleme Alır)",
+                btnAndroidGdriveText: "Google Drive'dan APK İndir",
                 btnPc: "Bilgisayar (Sadece Web Siteyi Açar)",
                 btnWeb: "Web Siteyi Aç",
                 githubText: "GitHub Açık Kaynak",
@@ -321,9 +376,17 @@
             },
             en: {
                 siteTitle: "GetHereEmu",
+                sectionIntro: "Introduction",
+                sectionIos: "iOS",
+                sectionAndroid: "Android",
+                sectionPc: "Computer",
+                sectionWeb: "Web",
+                sectionGithub: "GitHub",
+                sectionContact: "Contact",
                 seoText: `<strong>GetHereEmu</strong> is a free emulator and application platform developed by <strong>OsmanBurda</strong>. On this site, you can safely download <strong>.APK</strong> applications and game files for Android devices. You can either install them directly on your Android phone, or access them via the web interface on <strong>iOS (iPhone)</strong> or <strong>Computer (PC)</strong>. This fully open-source project offers a free archive of games and applications. Watch the video below to learn how to add it to your iOS home screen!`,
                 btnIos: "Add as iOS Home Screen App (Watch the video below)",
-                btnAndroid: "Download Android (.APK) (Gets Auto Update",
+                btnAndroid: "Download Android (.APK) (GitHub – Gets Auto Update)",
+                btnAndroidGdriveText: "Download APK from Google Drive",
                 btnPc: "Computer (Just Opens the Website)",
                 btnWeb: "Open Website",
                 githubText: "GitHub Open Source",
@@ -347,9 +410,18 @@
 
             // Tüm metinleri güncelle
             document.getElementById('siteTitle').textContent = translations[lang].siteTitle;
+            document.getElementById('sectionIntro').textContent = translations[lang].sectionIntro;
+            document.getElementById('sectionIos').textContent = translations[lang].sectionIos;
+            document.getElementById('sectionAndroid').textContent = translations[lang].sectionAndroid;
+            document.getElementById('sectionPc').textContent = translations[lang].sectionPc;
+            document.getElementById('sectionWeb').textContent = translations[lang].sectionWeb;
+            document.getElementById('sectionGithub').textContent = translations[lang].sectionGithub;
+            document.getElementById('sectionContact').textContent = translations[lang].sectionContact;
+
             document.getElementById('seoText').innerHTML = translations[lang].seoText;
             document.getElementById('btnIos').textContent = translations[lang].btnIos;
             document.getElementById('btnAndroid').textContent = translations[lang].btnAndroid;
+            document.getElementById('btnAndroidGdriveText').textContent = translations[lang].btnAndroidGdriveText;
             document.getElementById('btnPc').textContent = translations[lang].btnPc;
             document.getElementById('btnWeb').textContent = translations[lang].btnWeb;
             document.getElementById('githubText').textContent = translations[lang].githubText;
