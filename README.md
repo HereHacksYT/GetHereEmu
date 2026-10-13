@@ -133,6 +133,5 @@ This project is open source. See the repository for details.
 
 **OsmanBurBuda** — [@HereHacksYT](https://github.com/HereHacksYT)
 
----
 
-# Enjoy!!! sürümde artık `hereemu.onrender.com` geçmiyor; sadece `gethereemu.onrender.com` var. İstersen ekran görüntüsü veya SSS bölümü de ekleyebiliriz.
+#Enjoy!
