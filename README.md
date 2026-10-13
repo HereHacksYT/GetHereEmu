@@ -8,7 +8,7 @@
 
 ## ✨ Özellikler
 
-- 📺 **R Webeklamsız YouTube** deneyimi
+- 📺 **Reklamsız YouTube** deneyimi
 - 🎮 Kod ile oluşturulmuş oyunlar (yenileri yolda!)
 - 📱 **Android** için APK
  indirme (GitHub + Google Drive)
