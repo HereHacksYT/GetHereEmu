@@ -4,7 +4,9 @@
 | Ana Repo | Link |
 |--------|------|
 | HereEmu | [HereEmu]([https://github.com/HereHacksYT/GetHereEmu/blob/main/HereEmu_v10.0.0_sign.apk](https://github.com/HereHacksYT/HereEmu)) |
+
 ** Ne içerir?
+
 **GetHereEmu**, [OsmanBurda](https://github.com/HereHacksYT/HereEmu) tarafından geliştirilen **ücretsiz** bir emülatör ve uygulama platformudur. Android cihazlar için **.APK** dosyalarını indirebilir; iOS, Bilgisayar (PC) ve Web üzerinden tarayıcı arayüzüyle erişebilirsiniz.
 
 > 🎉 **Tamamen ücretsiz!** Kayıt yok, üyelik yok, reklam yok. Sadece tıkla ve kullan.
