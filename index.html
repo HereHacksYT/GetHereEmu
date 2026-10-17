@@ -51,22 +51,23 @@
 
         /* Bölüm başlıkları */
         .section-title {
-            font-size: 18px;
+           5 font-size: 18px;
             font-weight: 700;
             margin: 25px 0 15px;
-            padding-bottom: 8px;
+            paddingF-bottom: 8px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            text-align: left;
+            text-align2: left;
             color: #ffffff;
         }
 
-        .section-title:first-of-type {
+        .section-title:first;
+-of-type {
             margin-top: 0;
         }
 
         /* Dil seçici butonları */
         .lang-selector {
-            display: flex;
+                   display: flex;
             gap: 10px;
             justify-content: center;
             margin-bottom: 20px;
@@ -125,7 +126,7 @@
         }
 
         .btn-android-gdrive {
-            background-color: #1a73e8; /* Google Drive mavisi */
+            background-color: #1a73e8;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -139,8 +140,7 @@
         }
 
         .btn-pc {
-            background-color: #5865F2;
-        }
+            background-color: #586 }
 
         .btn-web {
             background-color: #3b82f6;
@@ -176,6 +176,7 @@
             border-radius: 4px;
         }
 
+        /* Gmail butonu stili */
         .btn-gmail {
             background-color: #ea4335;
             display: flex;
@@ -186,6 +187,22 @@
         }
 
         .btn-gmail img {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
+        /* Jubbio butonu (siyah) - Gmail'in altında */
+        .btn-jubbio {
+            background-color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-jubbio img {
             width: 24px;
             height: 24px;
             border-radius: 4px;
@@ -300,9 +317,7 @@
 
         <!-- === ANDROID BÖLÜMÜ === -->
         <h2 class="section-title" id="sectionAndroid">Android</h2>
-        <!-- GitHub'dan APK indirme (Doğrudan GitHub raw linki) -->
         <a href="https://github.com/HereHacksYT/GetHereEmu/blob/main/HereEmu_v10.0.0_sign.apk" class="btn btn-android" download="HereEmu_v10.0.0_sing.apk" id="btnAndroid">Android (.APK) İndir (GitHub – Otomatik Güncelleme Alır)</a>
-        <!-- Google Drive'dan APK indirme (Kendi linkinizi buraya ekleyin) -->
         <a href="https://drive.usercontent.google.com/u/0/uc?id=116HAApIIMV52vPnVmYs0T9ruQQocjRKe&export=download" class="btn btn-android-gdrive" id="btnAndroidGdrive">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLrIWClk8aghdqa55C_NS6Pdv5Or2802IqnFgqERUT5Q&s" alt="Google Drive Logo" />
             <span id="btnAndroidGdriveText">Google Drive'dan APK İndir</span>
@@ -346,10 +361,15 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-UpsGF25ae1gwhwoTGLavoHFld8MpH3HYrWiNf41geQ&s=10" alt="Gmail Logo" />
             <span id="gmailText">İletişim (Gmail)</span>
         </a>
+
+        <!-- Jubbio (siyah buton) - Gmail'in altında -->
+        <a href="https://jubbio.com/invite/SrE4Yqki" target="_blank" class="btn btn-jubbio" id="btnJubbio">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRewTeHNSUAgFrh3OXXHytlScfGthBcm2Vjv-OpUog8HQ&s=10" alt="Jubbio Logo" />
+            <span id="jubbioText">Jubbio</span>
+        </a>
     </div>
 
     <script>
-        // Dil verileri
         const translations = {
             tr: {
                 siteTitle: "GetHereEmu",
@@ -371,6 +391,7 @@
                 youtubeText: "YouTube",
                 telegramText: "Telegram",
                 gmailText: "İletişim (Gmail)",
+                jubbioText: "Jubbio",
                 videoTitle: "👇 İOS'da Ana Ekrana Nasıl Eklenir? İzleyin 👇",
                 videoFallback: "Tarayıcınız video oynatmayı desteklemiyor."
             },
@@ -394,21 +415,19 @@
                 youtubeText: "YouTube",
                 telegramText: "Telegram",
                 gmailText: "Contact (Gmail)",
+                jubbioText: "Jubbio",
                 videoTitle: "👇 How to Add to iOS Home Screen? Watch 👇",
                 videoFallback: "Your browser does not support video playback."
             }
         };
 
-        // Mevcut dil
         let currentLang = localStorage.getItem('lang') || 'tr';
 
-        // Dil değiştirme fonksiyonu
         function setLanguage(lang) {
             if (!translations[lang]) return;
             currentLang = lang;
             localStorage.setItem('lang', lang);
 
-            // Tüm metinleri güncelle
             document.getElementById('siteTitle').textContent = translations[lang].siteTitle;
             document.getElementById('sectionIntro').textContent = translations[lang].sectionIntro;
             document.getElementById('sectionIos').textContent = translations[lang].sectionIos;
@@ -429,27 +448,23 @@
             document.getElementById('youtubeText').textContent = translations[lang].youtubeText;
             document.getElementById('telegramText').textContent = translations[lang].telegramText;
             document.getElementById('gmailText').textContent = translations[lang].gmailText;
+            document.getElementById('jubbioText').textContent = translations[lang].jubbioText;
             document.getElementById('videoTitle').textContent = translations[lang].videoTitle;
             document.getElementById('videoFallback').textContent = translations[lang].videoFallback;
 
-            // Dil butonlarının aktif durumunu güncelle
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.lang === lang);
             });
 
-            // HTML lang attribute güncelle
             document.documentElement.lang = lang;
         }
 
-        // Dil butonlarına tıklama olayı ekle
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const lang = this.dataset.lang;
-                setLanguage(lang);
+            btn.addEventListener('click', function() {
+                setLanguage(this.dataset.lang);
             });
         });
 
-        // Sayfa yüklendiğinde kayıtlı dili uygula
         document.addEventListener('DOMContentLoaded', function() {
             setLanguage(currentLang);
         });
