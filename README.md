@@ -1,9 +1,9 @@
 # 🎮 GetHereEmu (Bu dağıtıcıdır!)
 
 ### Diğer Repo
-| Ana Repo | Link |
+| Ana Repo | |
 |--------|------|
-[HereEmu_v10.0.0_sign.apk](https://github.com/HereHacksYT/GetHereEmu/blob/main/HereEmu_v10.0.0_sign.apk) |
+[HereEmu](https://github.com/HereHacksYT/HereEmu) |
 
 ** Ne içerir?
 
