@@ -1,5 +1,6 @@
 # 🎮 GetHereEmu
 
+** Diğer Repo (https://github.com/HereHacksYT)
 **GetHereEmu**, [OsmanBurda](https://github.com/HereHacksYT) tarafından geliştirilen **ücretsiz** bir emülatör ve uygulama platformudur. Android cihazlar için **.APK** dosyalarını indirebilir; iOS, Bilgisayar (PC) ve Web üzerinden tarayıcı arayüzüyle erişebilirsiniz.
 
 > 🎉 **Tamamen ücretsiz!** Kayıt yok, üyelik yok, reklam yok. Sadece tıkla ve kullan.
