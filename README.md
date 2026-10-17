@@ -5,7 +5,7 @@
 |--------|------|
 [HereEmu](https://github.com/HereHacksYT/HereEmu) |
 
-** Ne içerir?
+## Ne içerir?
 
 **GetHereEmu**, [OsmanBurda](https://github.com/HereHacksYT/HereEmu) tarafından geliştirilen **ücretsiz** bir emülatör ve uygulama platformudur. Android cihazlar için **.APK** dosyalarını indirebilir; iOS, Bilgisayar (PC) ve Web üzerinden tarayıcı arayüzüyle erişebilirsiniz.
 
