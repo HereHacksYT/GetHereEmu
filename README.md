@@ -1,6 +1,6 @@
 # 🎮 GetHereEmu (Bu dağıtıcıdır!)
 
-### Diğer Repo
+### Ana Repo
 | Ana Repo | |
 |--------|------|
 [HereEmu](https://github.com/HereHacksYT/HereEmu) |
@@ -80,8 +80,13 @@ Bu proje açık kaynak kodludur. Detaylar için depoyu inceleyin.
 ---
 
 # 🇬🇧 English
-
+(This is the distributor!)
 **GetHereEmu** is a **free** emulator and application platform developed by [OsmanBurda](https://github.com/HereHacksYT). You can download **.APK** files for Android devices, and access it via the web interface on iOS, PC, and Web.
+
+### Main Repo
+| Main Repo | |
+|--------|------|
+[HereEmu](https://github.com/HereHacksYT/HereEmu) |
 
 > 🎉 **Completely free!** No sign-up, no membership, no ads. Just click and use.
 
