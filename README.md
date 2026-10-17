@@ -3,7 +3,7 @@
 ### Diğer Repo
 | Ana Repo | Link |
 |--------|------|
-| HereEmu | [HereEmu]([https://github.com/HereHacksYT/GetHereEmu/blob/main/HereEmu_v10.0.0_sign.apk](https://github.com/HereHacksYT/HereEmu)) |
+[HereEmu_v10.0.0_sign.apk](https://github.com/HereHacksYT/GetHereEmu/blob/main/HereEmu_v10.0.0_sign.apk) |
 
 ** Ne içerir?
 
